@@ -1,0 +1,10 @@
+external/
+logs/
+
+# Editor temporaries
+*.swp
+*~
+
+# Compiled python
+*.pyc
+
