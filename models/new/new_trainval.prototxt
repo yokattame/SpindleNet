@@ -1,0 +1,28 @@
+name: "new"
+
+layer {
+  name: "data"
+  type: "Python"
+  top: "data"
+  top: "label"
+  top: "headbox"
+  top: "bodybox"
+  top: "legbox"
+  top: "rarmbox"
+  top: "larmbox"
+  top: "rlegbox"
+  top: "llegbox"
+  python_param {
+    module: "roi_data_layer"
+    layer: "RoiDataLayer"
+    param_str: "{'source': 'external/exp/datalists/jstl_10/test.txt', 'root_folder': '', 'batch_size': 1, 'new_height': 96, 'new_width': 96, 'shuffle': False, 'mirror': False, 'mean_value': [103.939,116.779,123.68], 'region_num': 7, 'region_scale': True}"
+  }
+}
+
+layer {
+  name: "silence"
+  type: "Silence"
+  bottom: "data"
+  bottom: "label"
+}
+

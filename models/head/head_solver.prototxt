@@ -1,0 +1,29 @@
+net: "models/head/head_trainval.prototxt"
+test_iter: 1192
+test_interval: 1000
+test_initialization: false
+
+display: 20
+average_loss: 20
+iter_size: 2
+
+lr_policy: "multistep"
+base_lr: 0.1
+gamma: 0.5
+stepvalue: 25000
+stepvalue: 35000
+stepvalue: 40000
+stepvalue: 45000
+stepvalue: 50000
+stepvalue: 55000
+stepvalue: 60000
+stepvalue: 65000
+max_iter: 70000
+
+momentum: 0.9
+weight_decay: 0.0005
+
+snapshot: 10000
+snapshot_prefix: "external/exp/snapshots/head/head"
+solver_mode: GPU
+

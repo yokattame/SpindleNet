@@ -1,0 +1,17 @@
+net: "models/new/new_trainval.prototxt"
+
+display: 1
+iter_size: 1
+
+lr_policy: "multistep"
+base_lr: 0.1
+gamma: 0.5
+max_iter: 1
+
+momentum: 0.9
+weight_decay: 0.0005
+
+snapshot: 10000
+snapshot_prefix: "external/exp/snapshots/new/new"
+solver_mode: GPU
+

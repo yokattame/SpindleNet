@@ -1,0 +1,20 @@
+net: "models/spindlenet/spindlenet_trainval.prototxt"
+
+display: 20
+average_loss: 20
+iter_size: 2
+
+lr_policy: "multistep"
+base_lr: 0.005
+gamma: 0.5
+stepvalue: 30000
+stepvalue: 40000
+max_iter: 50000
+
+momentum: 0.9
+weight_decay: 0.0005
+
+snapshot: 10000
+snapshot_prefix: "external/exp/snapshots/spindlenet/spindlenet"
+solver_mode: GPU
+
